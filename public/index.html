@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parcial 2</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+
+    <!-- nav bar-->
+    <nav class="navbar">
+      <img src="img/logo.png" class="logo" alt="" />
+      <div class="join-box">
+        <p class="join-msg" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Ilimitado TV shows & Peliculas</p>
+        <button class="btn join-btn" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Suscribase hoy</button>
+        <button class="btn" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Ingresar</button>
+      </div>
+    </nav>
+
+    <!--principal-->
+    <header class="main">
+      <h1 class="heading">Pelis</h1>
+      <p class="info" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">  
+        Las mejores pelis de la Red, 
+        series y cosas para quitar el tiempo,todo esta aqui!!!
+      </p>
+
+
+        <div class="filtros" style="box-shadow: rgb(255, 255, 255);" id="rectangulo">
+          <h1 style="text-align: center;">Filtrar por</h1>
+          <hr/>
+          <br/>
+          <h4 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Idioma:</h4>
+          <input type="button" class="buttonES" value="Español" onclick="IdiomaES()">
+          <input type="button"  class="buttonUS" value="Ingles" onclick="IdiomaEN()">
+          <input type="button"  class="buttonRe" value="Recargar" onclick="Recargar()">
+          
+          <hr/> <br/>
+          <!--<h4>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h4>-->
+          <h4 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Géneros:</h4>
+          <input type="button"  class="buttonG" value="Ordenar por Generos" onclick="genera_tabla()">
+          <hr/> <br/>
+          <!--<h4>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h4>-->
+          
+          <h4 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Escribe un año</h4>
+          <input type="text" id="fname" name="fname"><br>
+          <input type="button"  class="buttonUS" value="Ingles" onclick="genera_tabla()">
+          <hr/> <br/>
+          <!--<h4>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h4>-->
+          <h4 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"></h4>Filtrar por Clasificacion</h4> 
+          <hr class="hr">
+
+
+
+<!-- FILTRACIONES -->
+    <div class="clasificacion" id="rectangulo2">
+      <div>
+        <input  type="radio"  name="G" value="G"> <!-- Clasificacion G -->
+        <Label class="label1" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Clasificación "G"</Label>
+    </div>
+    <div>
+      <input  type="radio"  name="G" value="Pg"> <!-- Clasificacion pg13 -->
+      <Label class="label1" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"></Label>Clasificación "PG-13"</Label>
+    </div>
+    <div>
+      <input class ="checkbox" type="radio" name="" id="R"> <!-- Clasificacion R -->
+      <Label class="label1" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Clasificación "R"</Label>
+    </div>
+    <div>
+      <input class ="checkbox" type="radio" name="" id="NC-17"> <!-- Clasificacion nc-17 -->
+      <Label class="label1" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Clasificación "NC-17"</Label>
+    </div>
+    <div>
+      <input class ="checkbox" type="radio" name="" id="NR"> <!-- Clasificacion nr -->
+      <Label class="label1" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Clasificación "NR"</Label>
+    </div>
+    <div>
+      <input class ="checkbox" type="radio" name="" id="PG"> <!-- Clasificacion pg -->
+      <Label class="label1" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Clasificación "PG"</Label>
+    </div>
+    <!-- Clasificacion por genero -->
+    </div>
+    <hr class="hr">
+         
+          <h4 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Peliculas actuales</h4>   
+          <input type="button"  class="buttonActuales" value="Mostrar" onclick="genera_tabla()">
+          <hr/> 
+          <h4 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Peliculas de Adultos mejor Calificadas</h4>
+          <input type="button"  class="buttonAdultosR" value="Mostrar" onclick="genera_tabla()">
+          <hr/>
+          <h4 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"></h4>
+          <h4 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Series de television</h4> 
+          <input type="button"  class="buttonSeries" value="Mostrar" onclick="genera_tabla()">
+          <hr/>
+        </div>
+      
+      </header>
+
+    <script src="js/api.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/prueba.js"></script>
+  </body>
+</html>
